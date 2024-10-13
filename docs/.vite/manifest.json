@@ -1,0 +1,18 @@
+{
+  "index.html": {
+    "file": "assets/index-DdctS2X8.js",
+    "name": "index",
+    "src": "index.html",
+    "isEntry": true,
+    "css": [
+      "assets/index-lVgDNGEA.css"
+    ],
+    "assets": [
+      "assets/darkcat-BVzmplw_.gif"
+    ]
+  },
+  "static/darkcat.gif": {
+    "file": "assets/darkcat-BVzmplw_.gif",
+    "src": "static/darkcat.gif"
+  }
+}

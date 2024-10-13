@@ -4,8 +4,10 @@ import { defineConfig } from 'vite'
 export default {
   base: './',
   build: {
-    outDir: './docs',
-    emptyOutDir: true, // also necessary
+    manifest: true,
+    minify: 'false',
+    modules : 'esnext',
+    outDir: './docs'
   },
   plugins: [
     {

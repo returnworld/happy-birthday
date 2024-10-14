@@ -28,6 +28,13 @@ img.style.top = 150 + "px";
 document.body.appendChild(img);
 img.style.position = "absolute";
 
+var zeroTWO = document.querySelector(".dance2");
+const darkCat = document.getElementById("darkcat");
+darkCat.style.zIndex = "12";
+darkCat.onclick = () => {
+  zeroTWO.classList.toggle("show");
+};
+
 if (isMobile() === false) {
   console.log(a);
 
@@ -56,8 +63,6 @@ if (isMobile() === false) {
   imgStars.src = stars;
   imgStars.className = "imgStars";
   divShadow.appendChild(imgStars);
-
-  var zeroTWO = document.querySelector(".dance2");
 
   window.addEventListener("resize", () => {
     whiteCatImg.style.left = window.innerWidth - 50 + "px";
@@ -116,12 +121,6 @@ if (isMobile() === false) {
   whiteCatImg.addEventListener("click", function () {
     zeroTWO.classList.toggle("filter");
   });
-
-  const darkCat = document.getElementById("darkcat");
-  darkCat.style.zIndex = "12";
-  darkCat.onclick = () => {
-    zeroTWO.classList.toggle("show");
-  };
 
   const cube = document.querySelector(".imgContainer");
   cube.ondragstart = function () {

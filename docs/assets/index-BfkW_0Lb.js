@@ -611,6 +611,12 @@ img.style.left = window.innerWidth / 2 - img.width / 2 + "px";
 img.style.top = "150px";
 document.body.appendChild(img);
 img.style.position = "absolute";
+var zeroTWO = document.querySelector(".dance2");
+const darkCat = document.getElementById("darkcat");
+darkCat.style.zIndex = "12";
+darkCat.onclick = () => {
+  zeroTWO.classList.toggle("show");
+};
 if (isMobile() === false) {
   let getCoords = function(elem) {
     var box = elem.getBoundingClientRect();
@@ -642,7 +648,6 @@ if (isMobile() === false) {
   imgStars.src = img$2;
   imgStars.className = "imgStars";
   divShadow.appendChild(imgStars);
-  var zeroTWO = document.querySelector(".dance2");
   window.addEventListener("resize", () => {
     whiteCatImg.style.left = window.innerWidth - 50 + "px";
     whiteCatImg.style.top = "20px";
@@ -674,11 +679,6 @@ if (isMobile() === false) {
   whiteCatImg.addEventListener("click", function() {
     zeroTWO.classList.toggle("filter");
   });
-  const darkCat = document.getElementById("darkcat");
-  darkCat.style.zIndex = "12";
-  darkCat.onclick = () => {
-    zeroTWO.classList.toggle("show");
-  };
   const cube = document.querySelector(".imgContainer");
   cube.ondragstart = function() {
     return false;

@@ -7,6 +7,10 @@ body {
   background: #000000;
 }
 
+#app { 
+	background-color: #000000;
+}
+
 .fireworks-container {
   z-index: 2;
   position: fixed;

@@ -922,7 +922,7 @@ function changeText() {
   }
   setTimeout(changeText, config.textChangeInterval);
 }
-gl.clearColor(1, 1, 1, 0);
+gl.clearColor(0, 0, 0, 0);
 createParticles();
 animate();
 setTimeout(changeText, config.textChangeInterval);

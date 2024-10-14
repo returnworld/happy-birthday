@@ -267,7 +267,7 @@ function changeText() {
 	nextTextTimeout = setTimeout(changeText, config.textChangeInterval);
 }
 
-gl.clearColor(1, 1, 1, 0);
+gl.clearColor(0, 0, 0, 0);
 createParticles();
 animate();
 nextTextTimeout = setTimeout(changeText, config.textChangeInterval);

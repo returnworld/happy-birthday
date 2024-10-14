@@ -6,7 +6,7 @@ import whiteCat from "../static/whitecat.gif";
 
 const divImages = document.createElement("div");
 divImages.className = "imgContainer";
-divImages.position = "absolute";
+divImages.style.position = "absolute";
 divImages.style.left = window.innerWidth/2 - 50  + "px";
 divImages.style.top = window.innerHeight - 200 + "px";
 document.body.appendChild(divImages);
@@ -117,12 +117,10 @@ cube.ondragstart = function () {
   return false;
 };
 
-cube.style.position = "absolute";
-document.body.appendChild(cube);
 cube.style.animation = "animate2 2s linear infinite";
 cube.style.animationPlayState = "paused";
 cube.onmousedown = function (e){
-
+//console.log("click");
   cube.style.animationPlayState = "running";
   // 1. отследить нажатие
   var coords = getCoords(cube);

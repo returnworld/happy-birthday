@@ -21,8 +21,11 @@ function isMobile() {
 }
 
 let pCount = 5000;
-
-if(isMobile()) pCount = 1100;
+let m = 4;
+if(isMobile()) {
+	pCount = 1100;
+	m = 1;
+}
 // Configurable parameters
 const config = {
 	particleCount: pCount,
@@ -153,8 +156,7 @@ function getTextCoordinates(text) {
 		let y = (canvas.height-splitText.length*fontSize/2) / 2 + index*fontSize;
 		ctx.fillText(line, x, y);
 	});
-	const m = 4;
-	if(isMobile()) m = 1;
+
 	const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
 	const coordinates = [];
 	for (let y = 0; y < canvas.height; y += m) {

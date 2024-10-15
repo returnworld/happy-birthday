@@ -47,7 +47,7 @@ function c(e, t) {
 function o(e, t) {
   return Math.floor(c(e, t + 1));
 }
-function m(e, t, i, s) {
+function m$1(e, t, i, s) {
   const n = Math.pow;
   return Math.sqrt(n(e - i, 2) + n(t - s, 2));
 }
@@ -336,13 +336,13 @@ class C {
     __publicField(this, "brightness");
     __publicField(this, "coordinates", []);
     __publicField(this, "currentDistance", 0);
-    for (this.x = t, this.y = i, this.sx = t, this.sy = i, this.dx = s, this.dy = n, this.ctx = h, this.hue = a2, this.speed = r, this.traceLength = u, this.acceleration = p, this.totalDistance = m(t, i, s, n), this.angle = Math.atan2(n - i, s - t), this.brightness = o(50, 70); this.traceLength--; )
+    for (this.x = t, this.y = i, this.sx = t, this.sy = i, this.dx = s, this.dy = n, this.ctx = h, this.hue = a2, this.speed = r, this.traceLength = u, this.acceleration = p, this.totalDistance = m$1(t, i, s, n), this.angle = Math.atan2(n - i, s - t), this.brightness = o(50, 70); this.traceLength--; )
       this.coordinates.push([t, i]);
   }
   update(t) {
     this.coordinates.pop(), this.coordinates.unshift([this.x, this.y]), this.speed *= this.acceleration;
     const i = Math.cos(this.angle) * this.speed, s = Math.sin(this.angle) * this.speed;
-    this.currentDistance = m(
+    this.currentDistance = m$1(
       this.sx,
       this.sy,
       this.x + i,
@@ -727,7 +727,11 @@ function isMobile() {
   return false;
 }
 let pCount = 5e3;
-if (isMobile()) pCount = 1100;
+let m = 4;
+if (isMobile()) {
+  pCount = 1100;
+  m = 1;
+}
 const config = {
   particleCount: pCount,
   textArray: ["С днём \nРождения!", "пупсик ;)", "(^_^)"],
@@ -840,12 +844,10 @@ function getTextCoordinates(text) {
     let y2 = (canvas.height - splitText.length * fontSize / 2) / 2 + index * fontSize;
     ctx.fillText(line, x2, y2);
   });
-  const m2 = 4;
-  if (isMobile()) m2 = 1;
   const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
   const coordinates = [];
-  for (let y2 = 0; y2 < canvas.height; y2 += m2) {
-    for (let x2 = 0; x2 < canvas.width; x2 += m2) {
+  for (let y2 = 0; y2 < canvas.height; y2 += m) {
+    for (let x2 = 0; x2 < canvas.width; x2 += m) {
       const index = (y2 * canvas.width + x2) * 4;
       if (imageData[index + 3] > 128) {
         coordinates.push({

@@ -28,7 +28,7 @@ export const fireworksOptions: FireworksOptions = {
   traceLength: 3,
   traceSpeed: 10,
   explosion: 5,
-  intensity: 30,
+  intensity: 0,
   flickering: 50,
   lineStyle: 'round',
   lineWidth: {

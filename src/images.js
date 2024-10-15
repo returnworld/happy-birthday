@@ -127,10 +127,17 @@ if (isMobile() === false) {
     return false;
   };
 
-  cube.style.animation = "animate2 2s linear infinite";
   cube.style.animationPlayState = "paused";
+ 
+  
   cube.onmousedown = function (e) {
-    //console.log("click");
+   
+    // let computedStyle = window.getComputedStyle(cube),
+    //     rotate = computedStyle.getPropertyValue('rotate');
+    // cube.style.rotate = rotate;
+    // console.log(rotate, cube.style.rotate);
+    cube.classList.toggle("revers-rotate");
+  
     cube.style.animationPlayState = "running";
     // 1. отследить нажатие
     var coords = getCoords(cube);

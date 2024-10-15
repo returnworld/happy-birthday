@@ -22,10 +22,10 @@ function isMobile() {
 
 let pCount = 5000;
 
-if(isMobile()) pCount = 1000;
+if(isMobile()) pCount = 500;
 // Configurable parameters
 const config = {
-	particleCount: 5000,
+	particleCount: pCount,
 	textArray: ["С днём \nРождения!", "пупсик ;)", "(^_^)"],
 	mouseRadius: 0.1,
 	particleSize: 2,
@@ -262,10 +262,12 @@ canvas.addEventListener("mousemove", (event) => {
 	mouse.y = (event.clientY / canvas.height) * -2 + 1;
 });
 
-canvas.addEventListener("touchmove", (event) => {
-	mouse.x = (event.clientX / canvas.width) * 2 - 1;
-	mouse.y = (event.clientY / canvas.height) * -2 + 1;
-});
+
+canvas.addEventListener("touchmove", (e) => {
+	mouse.x = (e.changedTouches[0].clientX / canvas.width) * 2 - 1;
+	mouse.y = (e.changedTouches[0].clientY / canvas.height) * -2 + 1;
+},
+{passive: true});
 
 canvas.addEventListener("mouseleave", () => {
 	mouse.x = -500;

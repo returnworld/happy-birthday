@@ -38,6 +38,7 @@ body {
   flex-direction: column;
   justify-content: center; /*центрируем элемент по горизонтали */
   align-items: center; /* и вертикали */
+  animation: rotate-anim  0.75s linear infinite;
 }
 
 .imgStars {
@@ -109,7 +110,7 @@ body {
 	width: calc(100% + 2px);
 	height: calc(100% + 2px);
 	z-index: -1;
-	animation: animate 30s linear infinite;
+	animation: animate 30s infinite;
   
 }
 
@@ -131,8 +132,12 @@ body {
 	}
 }
 
-@keyframes animate2 {
+@keyframes rotate-anim {
     100% {
     transform:rotate(360deg);
   }
+}
+
+.revers-rotate {
+	animation-direction: reverse;
 }

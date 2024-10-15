@@ -729,7 +729,7 @@ function isMobile() {
 let pCount = 5e3;
 let m = 4;
 if (isMobile()) {
-  pCount = 1100;
+  pCount = 2500;
   m = 1;
 }
 const config = {

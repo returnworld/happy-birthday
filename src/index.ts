@@ -22,7 +22,7 @@ fireworks.start();
 //fireworks.launch(10);
 
 window.addEventListener('click', function(e){
-  fireworks.launch(Number(7));
+  fireworks.launch(Number(1));
 })
 // window.addEventListener('mousedown',(e) => { 
 //   console.log("click")

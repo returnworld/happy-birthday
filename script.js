@@ -22,7 +22,7 @@ function isMobile() {
 
 let pCount = 5000;
 
-if(isMobile()) pCount = 1000;
+if(isMobile()) pCount = 2500;
 // Configurable parameters
 const config = {
 	particleCount: pCount,

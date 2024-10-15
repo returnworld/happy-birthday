@@ -727,7 +727,7 @@ function isMobile() {
   return false;
 }
 let pCount = 5e3;
-if (isMobile()) pCount = 1e3;
+if (isMobile()) pCount = 2500;
 const config = {
   particleCount: pCount,
   textArray: ["С днём \nРождения!", "пупсик ;)", "(^_^)"],
